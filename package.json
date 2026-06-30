@@ -1,0 +1,36 @@
+{
+  "name": "pc-cleanup-app",
+  "version": "1.0.0",
+  "description": "Tinder-achtige swipe-applicatie om lokale pc-mappen op te ruimen",
+  "main": "main.js",
+  "author": "PC Cleanup App",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.cleanup.pccleanupapp",
+    "productName": "PC Cleanup App",
+    "files": [
+      "main.js",
+      "index.html",
+      "package.json",
+      "icon.ico"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    },
+    "portable": {
+      "artifactName": "PC-Cleanup-App.exe"
+    }
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
